@@ -1,1 +1,2 @@
-# Knight-in-Dungeon
+# Knight Rescuing a princess in a dungeon
+<p>Imagine there is a story where the demons had captured the princess whose name is P and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M row, N column grid-like rooms (M x N). Our valiant knight named K was initially positioned in the top-left room and must finds his way through the dungeon fast to rescue the princess. The knight can move up, down, left, or right from and to an empty cell in one step. Also, let’s say if we had the chance to remove one or more obstacles what is the shortest path for the knight to reach and save the princess.</p>
