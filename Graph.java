@@ -15,6 +15,8 @@ public class Graph {
    void DeleteEdge(Node current) {
         current.right = null;
         current.left = null;
+        current.top = null;
+        current.bottom = null;
 
     }
 
