@@ -2,12 +2,17 @@ public class Node {
 
         int x; //x cordnaite
         int y; //y cordnaite
+
+
         Node right;
         Node top;
         Node bottom;
         Node left;
+
+
         Node next;
-        boolean obctical; 
+
+        boolean obctical;  
         boolean visited;
 
         Node(int x, int y, boolean obctical) {
@@ -23,8 +28,8 @@ public class Node {
    
  
 
-        void setVisit() {
-            visited = true;
+        void setVisit(boolean visited) {
+            this.visited = visited;
         }
     
         void setUnvisit() {
