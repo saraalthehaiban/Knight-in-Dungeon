@@ -3,7 +3,10 @@ public class Node {
         int x; //x cordnaite
         int y; //y cordnaite
         Node right;
+        Node top;
+        Node bottom;
         Node left;
+        Node next;
         boolean obctical; 
         boolean visited;
 
@@ -11,6 +14,8 @@ public class Node {
             this.x = x;
             this.y = y;
             this.right = null;
+            this.top = null;
+            this.bottom = null;
             this.left = null;
             this.obctical = obctical;
             visited = false;
@@ -28,6 +33,9 @@ public class Node {
         void removeObctical(){
             obctical=false;
         }
+        void setObctical( boolean obctical){
+            this.obctical=obctical;
+        }
 
         //setters and getters
         int getX(){
@@ -42,5 +50,6 @@ public class Node {
         boolean getVisited(){
         return visited;
         }
+  
         
     }
