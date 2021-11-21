@@ -1,13 +1,17 @@
 public class Node {
 
         int x; //x cordnaite
-        int y; //y cordinate
+        int y; //y cordnaite
+        Node right;
+        Node left;
         boolean obctical; 
-        boolean visited; 
-    
+        boolean visited;
+
         Node(int x, int y, boolean obctical) {
             this.x = x;
             this.y = y;
+            this.right = null;
+            this.left = null;
             this.obctical = obctical;
             visited = false;
         }
@@ -38,4 +42,5 @@ public class Node {
         boolean getVisited(){
         return visited;
         }
+        
     }
