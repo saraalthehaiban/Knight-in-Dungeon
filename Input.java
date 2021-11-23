@@ -77,7 +77,7 @@ public class Input{
             }
            
         }
-        System.out.println("Please enter the obstacle to remove:");
+        System.out.println("Please enter the number of obstacles to remove:");
        int obs = -1;
        do{ //checks if the number is not an integer
             try{
