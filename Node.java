@@ -1,46 +1,27 @@
-public class Node {
-
-        int x; //x cordnaite
-        int y; //y cordnaite
-        Node right;
-        Node left;
-        boolean obctical; 
-        boolean visited;
-
-        Node(int x, int y, boolean obctical) {
-            this.x = x;
-            this.y = y;
-            this.right = null;
-            this.left = null;
-            this.obctical = obctical;
-            visited = false;
-        }
-   
- 
-
-        void setVisit() {
-            visited = true;
-        }
+public class Node { //Node represents a position (cell) in the map
     
-        void setUnvisit() {
-            visited = false;
-        }
-        void removeObctical(){
-            obctical=false;
-        }
+            private int x; //x-coordinate
+            private int y; //y-coordintae
+            private int k; //number of obstacles that can be removed to reach the end node
 
-        //setters and getters
-        int getX(){
-            return x;
-        }
-        int getY(){
-            return y;
-        }
-        boolean getObctical(){
-            return obctical;
-        }
-        boolean getVisited(){
-        return visited;
-        }
-        
-    }
+
+            //Constructor to instialize x, y, and k
+            Node(int x, int y, int k) {
+                this.x = x;
+                this.y = y;
+                this.k = k;
+            }
+
+            //Getters
+            public int getX(){
+                return x;
+            }
+
+            public int getY(){
+                return y;
+            }
+
+            public int getK(){
+                return k;
+            }
+}
