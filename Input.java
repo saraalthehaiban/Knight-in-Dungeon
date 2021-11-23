@@ -94,6 +94,8 @@ public class Input{
 
         path(twoD, obs); //With K obstacles
         path(twoD, 0); //With 0 obstacles
+       } else{
+        path(twoD, 0); //With 0 obstacles
        }
 
 
