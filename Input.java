@@ -210,7 +210,7 @@ public class Input{
                     obstaclesLeft[x][y] = obstaclesLeftNow;
                     //Mark the node as visited 
                     visited[x][y] = true;
-                    //Mark the parent of the new node as current node
+                    //Make the current node the parent of the new node
                     parent[x][y] = node; 
                 }
             }
