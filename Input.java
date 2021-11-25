@@ -43,9 +43,9 @@ public class Input{
        do{ //checks if the number is not an integer
             try{
                 obstacles = sc.nextInt(); //get the number of obstacles from the user
-                while(obstacles < 0){ //checking if the number of obstacles is negative
+                while(obstacles > (rows * columns)){ //checking if the number of obstacles is negative
                     System.out.println("Invalid obstacles number, please try again.");
-                    obstacles = sc.nextInt();
+                    obstacles = sc.nextInt();   
                 }
             }catch(java.util.InputMismatchException e){
                 System.out.println("Invalid obstacles number, please try again.");
@@ -65,6 +65,11 @@ public class Input{
                  System.out.println("Already taken, please enter another location.");
                  i--;
              }
+             if(obCol== 0 && obRow==0){ //checks if the location exists
+                System.out.println("Input cannot be equal to the start position, Please enter another location.");
+                sc.nextLine();
+                i--;
+            }
              twoD[obRow][obCol] = 1; //adds the obstacles to the map
             }
             catch (java.lang.ArrayIndexOutOfBoundsException e){
