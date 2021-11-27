@@ -169,7 +169,7 @@ public class Input{
                   //Step 2.2.3: Get solution path using array of parents (fill in arr) and get positions of nodes where obstacles were removed (fill in nodesRemoved)
                   //Backtrack to the start node
                   while(parentNode!=null && !(parentNode.getX()==0 && parentNode.getY()==0)){ //Checks if the parent node is not the start node
-                    if(map[parentNode.getX()][parentNode.getY()] == 1) //If there was an obtacle in the position, then it was removed 
+                    if(map[parentNode.getX()][parentNode.getY()] == 1) //If there was an obstacle in the position, then it was removed 
                       nodesRemoved.add(parentNode);
                     arr.add(parentNode);//Always add the parent node to the arr to get the full path
                     parentNode = parent[parentNode.getX()][parentNode.getY()];//Get the parent of the current parent node
