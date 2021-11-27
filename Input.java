@@ -133,15 +133,15 @@ public class Input{
         
         //boolean 2d array of visited positions in the map – true if visited (indicated whether a position is visited or not – explored set)
         boolean[][] visited = new boolean[map.length][map[0].length];
-        //int 2d int array of number number of removale obstacles at each position (indicates if we can move to a new node at a given position or not)
+        //int 2d int array of number number of removal obstacles at each position (indicates if we can move to a new node at a given position or not)
         int[][] obstaclesLeft = new int[map.length][map[0].length];
         //Node 2d array of parent nodes (indicates how we arrived to the current node – solution path)  
         Node[][] parent = new Node[map.length][map[0].length];
-        //Queue of nodes imlemented with LinkedList
+        //Queue of nodes implemented with LinkedList
         Queue<Node> q = new LinkedList<>(); // – frontier
 
         //Step 2.1: Adding first node to queue 
-        // We start by putting the first node of cooredinate (0, 0) into the queue
+        // We start by putting the first node of coordinate (0, 0) into the queue
         q.add(new Node(0, 0, k)); 
 
         //Parent of the first node is null, since it is the start of the path (0,0)
