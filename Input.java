@@ -43,7 +43,7 @@ public class Input{
        do{ //checks if the number is not an integer
             try{
                 obstacles = sc.nextInt(); //get the number of obstacles from the user
-                while(obstacles > (rows * columns)){ //checking if the number of obstacles is negative
+                while((obstacles > (rows * columns))||(obstacles<0)){ //checking if the number of obstacles is more than the map size
                     System.out.println("Invalid obstacles number, please try again.");
                     obstacles = sc.nextInt();   
                 }
@@ -67,6 +67,11 @@ public class Input{
              }
              else if(obCol== 0 && obRow==0){ //checks if the location exists
                 System.out.println("Input cannot be equal to the start position, Please enter another location.");
+                sc.nextLine();
+                i--;
+            }
+            else if(obRow==rows-1 && obCol==columns-1){ //checks if the location exists
+                System.out.println("Input cannot be equal to the end position, Please enter another location.");
                 sc.nextLine();
                 i--;
             }
@@ -120,6 +125,7 @@ public class Input{
       // map[x][y] - if any cell value is 1, it means it is an obstacle; if 0, it is an empty cell
       //Method that returns the minimum path when a 2d map is given with the number of removable obstacles
       public static void path(int[][] map, int k) {
+
         //Step 1: Set up variables and queue 
         // Arrays used to go right, left, down, and up
         int[] dx = new int[] {0, 0, 1, -1};
@@ -169,6 +175,7 @@ public class Input{
                     parentNode = parent[parentNode.getX()][parentNode.getY()];//Get the parent of the current parent node
                   }
                   arr.add(parentNode);//Add the start (0,0) node into the arr
+
                   //Step 2.2.4: Print the output which includes the k, positions of removed obstacles, number of steps taken, and full path from (0,0) to (M-1, N-1)
                   System.out.print("The shortest path with " + k + " obstacle elimination ");
                   if(nodesRemoved.size() != 0){ //If k=0 or no obstacles were removed, this will no print anything since no obstacles were removed
@@ -188,6 +195,8 @@ public class Input{
                   }
                   return; //Return since we found a path 
                 }
+
+
                 //Step 2.2.5: Choose the next node using BFS
                 // If the current node is not the last node (not in the bottom-right corner)
                 for (int j = 0; j < 4; j++) { //4 = all possible movements ( 1- right, 2- left, 3- down, 4- up) using direction arrays in set up
