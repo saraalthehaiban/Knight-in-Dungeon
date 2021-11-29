@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class Input{
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
        
        Scanner sc = new Scanner(System.in); //Scanner declaration to read from the user
