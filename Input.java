@@ -94,12 +94,14 @@ public class Input{
        do{ //checks if the number is not an integer
             try{
                 obs = sc.nextInt(); //get the number of obstacles to be removed from the user
-                while(obs < 0){ //checking if the number of obstacles to be removed is negative
+                while(obs < 0 || obs > obstacles){ //checking if the number of obstacles to be removed is negative or grater than the number of obstacles
                     System.out.println("Invalid obstacles number, please try again.");
                     obs = sc.nextInt();
                 }
+                
             } catch(java.util.InputMismatchException e){
                     System.out.println("Invalid obstacles number, please try again.");
+                    obs = -1; // to enter the loop again
             }
             sc.nextLine(); //clears the buffer
         }while(obs < 0);
